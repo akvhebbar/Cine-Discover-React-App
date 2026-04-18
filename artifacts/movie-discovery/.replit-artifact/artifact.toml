@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "CineDiscover"
+version = "1.0.0"
+id = "artifacts/movie-discovery"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21721
+
+[services.development]
+run = "pnpm --filter @workspace/movie-discovery run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/movie-discovery", "run", "build" ]
+publicDir = "artifacts/movie-discovery/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21721"
+BASE_PATH = "/"

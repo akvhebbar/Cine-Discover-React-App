@@ -1,0 +1,8 @@
+- `[x]` Run `detype` on `artifacts`, `lib`, and `scripts`
+- `[x]` Delete all `.ts` and `.tsx` source files
+- `[x]` Delete all `tsconfig.json` and `tsconfig.base.json` files
+- `[x]` Update `api-server/build.mjs`
+- `[x]` Update `package.json` in all workspaces (remove `typecheck`, remove TS devDependencies, etc.)
+- `[x]` Update `pnpm-workspace.yaml` and root `package.json`
+- `[x]` Run `pnpm install`
+- `[x]` Verify everything works
